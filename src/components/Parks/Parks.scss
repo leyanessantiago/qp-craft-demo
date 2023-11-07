@@ -1,0 +1,87 @@
+@import "../../styles/colors";
+
+.card__banner {
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+
+  @each $category, $properties in $categories {
+    &__#{$category} {
+      background-color: map-get($properties, "background-color");
+      color: map-get($properties, "color");
+    }
+  }
+}
+
+.card__image {
+  width: 100%;
+  min-height: 250px;
+}
+
+.card__title {
+  font-weight: bold;
+}
+
+.card__body {
+  padding: 15px;
+  flex: 1 1 auto;
+}
+
+.card__description {
+  margin-bottom: 30px;
+}
+
+.card__title {
+  font-size: 36px;
+  margin-bottom: 15px;
+
+  @each $category, $properties in $categories {
+    &__#{$category} {
+      color: map-get($properties, "background-color");
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+  }
+}
+
+.featured_card {
+  order: -1;
+
+  .card, .card__banner {
+    background-color: $elm;
+    color: $white;
+  }
+
+  .card__title {
+    color: $white;
+  }
+
+  .button {
+    background-color: $chrome;
+    color: $black;
+
+    &:hover {
+      background-color: $picton-blue !important;
+    }
+  }
+}
+
+.card__link {
+  @each $category, $properties in $categories {
+    &__#{$category} {
+      $background-color: map-get($properties, "background-color");
+      background-color: $background-color;
+      color: map-get($properties, "color");
+
+      &:hover {
+        background-color: map-get($button-hover, $background-color, "background-color");
+        color: map-get($button-hover, $background-color, "color");
+      }
+    }
+  }
+}
