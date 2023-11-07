@@ -1,0 +1,10 @@
+@import "../../../styles/colors";
+
+.button {
+  padding: 8px 15px;
+  font-weight: bold;
+  text-align: center;
+  background-color: $dune;
+  color: $white;
+  text-decoration: none;
+}
