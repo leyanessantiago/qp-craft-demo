@@ -8,5 +8,6 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: 'happy-dom'
-  }
+  },
+  base: "/qp-craft-demo/"
 })
