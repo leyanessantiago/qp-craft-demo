@@ -1,0 +1,26 @@
+.select__container {
+  margin: 10px 0;
+
+  .select__label {
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .select {
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+  }
+}
