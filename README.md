@@ -1,5 +1,7 @@
 # Craft Demo
 
+GitHub Page: https://leyanessantiago.github.io/qp-craft-demo/
+
 ## Description
 
 It uses React + TypeScript + Vite.
